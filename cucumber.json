@@ -6,7 +6,9 @@
     ],
     "paths": ["src/test/features/*.feature"],
     "requireModule": ["ts-node/register"],
-    "format": ["progress"],
+    "format": [
+      "json:report-results/report.json"
+    ],
     "publishQuiet": true
   }
 }
