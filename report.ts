@@ -1,5 +1,6 @@
 import * as os from 'os';
-import { generate } from 'multiple-cucumber-html-reporter';
+
+const { generate } = require('multiple-cucumber-html-reporter');
 
 interface PlatformInfo {
   name: string;
@@ -33,14 +34,3 @@ function generateReport() {
 }
 
 generateReport();
-
-
-generate({
-  jsonDir: 'cucumber-report',
-  reportPath: 'cucumber-html-report',
-  metadata: {
-    browser: { name: 'chrome', version: '92' },
-    device: 'Local test machine',
-    platform: { name: 'ubuntu', version: '20.04' }
-  }
-});
