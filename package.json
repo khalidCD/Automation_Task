@@ -6,7 +6,8 @@
     "test:createorg": "cucumber-js --tags='@successfullylogin'",
     "test": "cucumber-js --format json:test-results/cucumber.json",
     "report": "ts-node report.ts",
-    "test:report": "npm run test && npm run report"
+    "test:report": "npm run test && npm run report",
+    "failederror":"cucumber-js -p rerun @rerun.txt"
   },
   "keywords": [],
   "author": "",
