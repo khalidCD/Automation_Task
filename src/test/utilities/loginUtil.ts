@@ -1,7 +1,7 @@
 
 import { LoginPage } from '../pageObjects/LoginPage';
 import { LoginActions } from '../pageActions/LoginActions';
-import { page } from '../hooks/Loginhooks';
+import { page } from '../hooks/hooks';
 import { expect } from '@playwright/test';
 
 export async function loginSuccessfully() {

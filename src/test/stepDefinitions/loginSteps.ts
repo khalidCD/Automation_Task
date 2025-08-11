@@ -3,7 +3,7 @@
 import { Given, When, Then } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { loginSuccessfully } from '../utilities/loginUtil';
-import { page } from '../hooks/Loginhooks';
+import { page } from '../hooks/hooks';
 import { LoginPage } from '../pageObjects/LoginPage';
 import { LoginActions } from '../pageActions/LoginActions';
 import dotenv from 'dotenv';
