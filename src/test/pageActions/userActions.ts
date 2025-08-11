@@ -15,5 +15,10 @@ export class UserActions {
 
   async confirmAndCreate() { await this.userPage.clickConfirmCreate(); }
 
-
+  async verifyInvalidEmailError() {
+    const isVisible = await this.userPage.isInvalidEmailErrorVisible();
+    if (!isVisible) {
+      throw new Error('Expected "Invalid email format" error message was not shown');
+    }
+  }
 }

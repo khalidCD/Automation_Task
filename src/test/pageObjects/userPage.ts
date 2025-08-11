@@ -16,6 +16,8 @@ export class UserPage {
   confirmCreateBtn = () => this.page.locator('//button//child::p[text()="Confirm & Create"]');
   usersList = () => this.page.locator('//table//tr');
 
+  invalidEmailError = () => this.page.locator('//p[contains(text(),"Invalid email format")]');
+
   async clickUserMenu() { await this.userMenu().click(); }
   async clickCreateUserButton() { await this.createUserBtn().click(); }
   async selectBulkUserOption() { await this.bulkUserOption().click(); }
@@ -34,4 +36,8 @@ export class UserPage {
     await this.confirmCreateBtn().click();
   }
 
+
+  async isInvalidEmailErrorVisible() {
+    return await this.invalidEmailError().isVisible();
+  }
 }

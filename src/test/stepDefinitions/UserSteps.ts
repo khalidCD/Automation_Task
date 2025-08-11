@@ -34,6 +34,17 @@ When('I select an organization and upload the bulk user file', async function ()
   await userActions.clickNextButton();
 });
 
+When('I select an organization and upload the bulk user file with invalid email', async function () {
+  const filePath = 'assets/bulk-invalid-email.csv';
+  await userActions.selectOrganizationAndUpload('khalid test', filePath);
+  await userActions.clickNextButton();
+});
+
+
+Then('I should see an error message {string}', async function (userpagevisible: string) {
+  const isVisible = await page.locator(`//p[contains(text(),"${userpagevisible}")]`).isVisible();
+
+}); 
 When('I click Next on the {string} step', async function (stepName: string) {
   await userActions.clickNextButton();
 });
